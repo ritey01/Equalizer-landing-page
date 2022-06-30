@@ -5,6 +5,7 @@ const MobileImg = styled.img`
   position: absolute;
   top: -15%;
   right: -25%;
+  width: 281px;
 `;
 
 const TabletImg = styled.img`
