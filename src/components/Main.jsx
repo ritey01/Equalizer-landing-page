@@ -3,14 +3,13 @@ import { images } from "./images";
 
 const MainContainer = styled.div`
   position: relative;
-`;
-const PhoneImg = styled.img`
-  width: 55.5%;
-  position: absolute;
-  top: -21%;
-  left: 50%;
-  margin-left: -104px;
-  /* left: 24%; */
+  @media (min-width: 750px) {
+    min-width: 100%;
+    margin-left: 2rem;
+  }
+  @media (min-width: 1430px) {
+    margin-left: 6rem;
+  }
 `;
 
 const BgPattern = styled.div`
@@ -19,20 +18,77 @@ const BgPattern = styled.div`
   text-align: center;
   border-radius: 0.5rem;
   margin-top: 6rem;
+  & :first-child {
+    width: 75%;
+  }
+
+  @media (min-width: 750px) {
+    width: 90%;
+    margin-top: 10rem;
+
+    & :first-child {
+      width: 41.5%;
+
+      padding-bottom: 9.5rem;
+      margin-left: 3rem;
+      margin-top: -1rem;
+    }
+  }
+  @media (min-width: 1430px) {
+    & :first-child {
+      width: 25%;
+      margin-left: -13.9rem;
+      margin-top: -2rem;
+      padding-bottom: 6.8rem;
+    }
+  }
 `;
 
+const PhoneImg = styled.img`
+  width: 55.5%;
+  position: absolute;
+  top: -21%;
+  left: 22%;
+
+  @media (min-width: 750px) {
+    top: -22%;
+    left: 10%;
+    margin-left: 0;
+    width: 40%;
+  }
+  @media (min-width: 1430px) {
+    width: 23%;
+    top: -31%;
+  }
+`;
 const PremiumContainer = styled.section`
   background-color: ${(props) => props.theme.colors.darkOrange};
   padding: 1rem 1.8rem 2rem 1.8rem;
   position: absolute;
   top: 90%;
   border-radius: 0.5rem;
+  @media (min-width: 750px) {
+    width: 50%;
+    top: 27%;
+    left: 32%;
+  }
+  @media (min-width: 1430px) {
+    top: 18%;
+    left: 40%;
+    width: 30%;
+  }
 `;
 
 const PremiumTitle = styled.h2`
   color: ${(props) => props.theme.colors.white};
   font-size: 32px;
   margin-bottom: 0.8rem;
+  font-weight: ${(props) => props.theme.h2.fontWeight};
+
+  @media (min-width: 1430px) {
+    font-size: ${(props) => props.theme.h2.fontSize};
+    line-height: ${(props) => props.theme.h2.lineSpacing};
+  }
 `;
 
 const StyledPara = styled.p`
@@ -40,6 +96,11 @@ const StyledPara = styled.p`
   font-weight: ${(props) => props.theme.body2.fontWeight};
   font-size: 18px;
   line-height: ${(props) => props.theme.body2.lineSpacing};
+  @media (min-width: 1430px) {
+    font-size: ${(props) => props.theme.body1.fontSize};
+    line-height: ${(props) => props.theme.body1.lineSpacing};
+    padding-right: 1.6rem;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -86,14 +147,10 @@ const Main = () => {
     <>
       <MainContainer>
         <BgPattern>
-          <img
-            src={images("./bg-pattern-2.svg")}
-            alt="background pattern"
-            width="75%"
-          />
+          <img src={images("./bg-pattern-2.svg")} alt="background pattern" />
           <PhoneImg
             src={images("./illustration-app.png")}
-            alt="equalizer company logo"
+            alt="equalizer phone image"
           />
         </BgPattern>
         <PremiumContainer>
@@ -103,7 +160,7 @@ const Main = () => {
             spatial audio. Take your listening experience to a whole new level
             and access all our incredible features!
             <StyledPrice>
-              <Money>$4 </Money>/ month
+              <Money>$4 {"  "}</Money>/ month
             </StyledPrice>
           </StyledPara>
           <ButtonContainer>
