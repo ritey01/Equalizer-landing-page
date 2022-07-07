@@ -4,9 +4,7 @@ import Footer from "./components/Footer";
 import Background from "./components/Background";
 import styled from "styled-components";
 
-const PageContainer = styled.div`
-  z-index: 1;
-`;
+const PageContainer = styled.div``;
 
 const App = () => {
   return (
