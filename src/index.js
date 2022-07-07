@@ -12,11 +12,17 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   padding:0;
-  margin:0;
-  height: 100%;
+  
+  min-height: 100vh;
   font-family: 'IBM Plex Sans', sans-serif;
+
+  margin: 0 auto;
+  @media(min-width: 1430px  ){
+    
+  }
  
 }
+
 
 svg {
   display: block;
