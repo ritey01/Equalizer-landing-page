@@ -75,10 +75,10 @@ const HeaderImg = styled.img`
   }
 `;
 const Header = () => {
-  const [width, setWidth] = useState(window.screen.width);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    window.addEventListener("resize", () => setWidth(window.screen.width));
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
   });
   return (
     <StyledHeader>
