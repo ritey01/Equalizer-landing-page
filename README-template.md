@@ -7,6 +7,9 @@
   - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
+      - [Mobile design](#mobile-design)
+      - [Tablet design](#tablet-design)
+      - [Desktop design](#desktop-design)
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
@@ -24,17 +27,20 @@ Users should be able to:
 
 ### Screenshot
 
+#### Mobile design
 <img src ="./src/assets/mobileMydesign.png"
 alt="Mobile design" 
 width="200"/>
 
+#### Tablet design
 <img src ="./src/assets/tabletMydesign.png"
 alt="Tablet design" 
 width="200"/>
 
+#### Desktop design
 <img src ="./src/assets/DesktopMydesign.png"
 alt="Desktop design" 
-width="200"/>
+width="300"/>
 
 
 ## My process
