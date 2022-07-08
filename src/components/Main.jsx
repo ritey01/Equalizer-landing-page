@@ -118,11 +118,20 @@ const Button = styled.button`
 const IosButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.black};
   margin-bottom: 0.7rem;
+  &:hover {
+    background-color: ${(props) => props.theme.colors.green};
+    cursor: pointer;
+  }
 `;
 
 const AndroidButton = styled(Button)`
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.black};
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.lightOrange};
+    cursor: pointer;
+  }
 `;
 
 const StyledPrice = styled.div`
